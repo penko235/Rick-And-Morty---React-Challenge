@@ -6,9 +6,9 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 import PageNotFound from './components/PageNotFound';
-import Episodes from './components/Episodes';
-import Location from './components/Location';
-import Characters from './components/Characters';
+import Episodes from './components/episodes/Episodes';
+import Location from './components/location/Location';
+import Characters from './components/characters/Characters';
 import { CssBaseline } from '@material-ui/core';
 
 const root = {

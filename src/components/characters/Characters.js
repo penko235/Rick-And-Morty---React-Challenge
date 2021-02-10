@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CharactersCard from './CharactersCard';
+import CharactersCard from '../episodes/CharactersCard';
 import SearchBar from './SearchBar';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';

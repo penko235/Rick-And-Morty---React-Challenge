@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import { AuthContext } from '../components/context/auth-context';
+import { AuthContext } from '../context/auth-context';
 import { Grid, Paper, Avatar, TextField, Button } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 
 const root = {
   background: '#262C3A',

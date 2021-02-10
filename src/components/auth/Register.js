@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 import { useHistory, Link } from 'react-router-dom';
-import { AuthContext } from '../components/context/auth-context';
+import { AuthContext } from '../context/auth-context';
 import { Grid, Paper, Avatar, TextField, Button } from '@material-ui/core';
 
 const root = {

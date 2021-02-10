@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import { Collapse, IconButton } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';

@@ -39,9 +39,6 @@ const useStyles = makeStyles({
     backgroundColor: '#B5EDFC',
     color: '#363636',
   },
-  // detailsHeading: {
-  //   textAlign: 'center',
-  // },
   textButton: {
     color: '#000',
     '&:hover': {
