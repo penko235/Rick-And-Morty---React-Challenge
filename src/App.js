@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import { AuthContext } from './components/context/Auth-context';
+import { AuthContext } from './components/context/auth-context';
 import Home from './components/views/Home';
 import Navbar from './components/views/Navbar';
 import Login from './components/auth/Login';
