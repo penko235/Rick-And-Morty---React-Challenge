@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { AuthContext } from './components/context/auth-context';
-import Home from './components/Home';
-import Navbar from './components/Navbar';
-import Login from './components/Login';
-import Register from './components/Register';
-import PageNotFound from './components/PageNotFound';
+import Home from './components/views/Home';
+import Navbar from './components/views/Navbar';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import PageNotFound from './components/views/PageNotFound';
 import Episodes from './components/episodes/Episodes';
 import Location from './components/location/Location';
 import Characters from './components/characters/Characters';
