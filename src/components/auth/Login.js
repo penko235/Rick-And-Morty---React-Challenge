@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import { AuthContext } from '../context/auth-context';
+import { AuthContext } from '../context/Auth-context';
 import { Grid, Paper, Avatar, TextField, Button } from '@material-ui/core';
 import Alert from '@material-ui/lab/Alert';
 import Navbar from '../views/Navbar';
