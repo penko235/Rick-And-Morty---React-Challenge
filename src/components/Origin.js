@@ -6,7 +6,7 @@ import OriginCard from './OriginCard';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    margin: '15px 237px;',
+    margin: '15px 145px;',
   
   },
 }));
