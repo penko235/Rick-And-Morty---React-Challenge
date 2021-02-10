@@ -14,6 +14,7 @@ import { CssBaseline } from '@material-ui/core';
 const root = {
   background: '#262C3A',
   fontFamily: 'Nunito',
+  margin: 0
 };
 
 const App = () => {

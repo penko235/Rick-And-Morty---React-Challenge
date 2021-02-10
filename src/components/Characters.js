@@ -7,9 +7,8 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: '1600px',
+    maxWidth: '1400px',
     margin: '0 auto',
-   
   },
   heading: {
     marginTop: '5em',

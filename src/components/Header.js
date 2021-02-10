@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   title: {
     color: '#fff',
     fontFamily: 'Nunito',
-    fontSize: '5rem',
+    fontSize: '4rem',
   },
   container: {
     textAlign: 'center',
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     fontSize: '6rem',
   },
   img: {
-    width: 250,
+    width: 210,
   },
 });
 
