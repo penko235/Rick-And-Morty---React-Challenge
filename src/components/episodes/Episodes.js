@@ -3,6 +3,7 @@ import axios from 'axios';
 import EpisodeCard from './EpisodeCard';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
+import Pagination from './Pagination'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '5em',
     textAlign: 'center',
     color: '#fff',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 }));
 
@@ -38,7 +39,7 @@ const Episodes = () => {
         console.log(err);
       });
   };
-  
+
   useEffect(() => {
     getAllEpisodes();
   }, []);
@@ -62,6 +63,7 @@ const Episodes = () => {
           );
         })}
       </Grid>
+      <Pagination />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import OriginCard from './OriginCard';
+import OriginModal from './OriginModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,6 +40,7 @@ const Origin = ({ props }) => {
             return (
               <Grid item md={3}>
                 <OriginCard key={index} origin={origin} />
+                
               </Grid>
             );
           })}

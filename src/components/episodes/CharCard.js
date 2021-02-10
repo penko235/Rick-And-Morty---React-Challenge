@@ -96,11 +96,10 @@ const CharCard = ({ props }) => {
               Location: {char.location.name}
             </Typography>
           )}
-       
         </CardContent>
       </CardActionArea>
       <CardActions></CardActions>
-      <OriginModal char={char.origin} />
+      {char.origin && <OriginModal char={char.origin} />}
       <LocationModal char={char.location} />
     </Card>
   );
