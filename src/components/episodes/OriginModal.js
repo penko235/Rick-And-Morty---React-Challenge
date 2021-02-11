@@ -22,6 +22,11 @@ const styleCloseBtn = {
   top: '0',
   right: '5px'
 }
+
+const noCharactersFound = {
+  margin: '10px auto',
+  color: 'red'
+}
 // MODAL
 const DialogTitle = withStyles()((props) => {
   const { children, classes, onClose, ...other } = props;
@@ -69,7 +74,6 @@ const OriginModal = (props) => {
     getAllChar();
   }, []);
 
-  console.log(originChar);
 
   const closeOrigin = () => {
     setOrigin(false);
@@ -113,7 +117,7 @@ const OriginModal = (props) => {
                   );
                 })}
                 {!originChar.residents && (
-                  <h1>No characters</h1>
+                  <h1 style={noCharactersFound}>No Characters</h1>
                 )}
             </Grid>
           </Typography>

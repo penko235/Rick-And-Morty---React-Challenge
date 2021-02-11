@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '1400px',
     margin: '0 auto',
-    height: '100%'
+    height: '170vh'
   },
   heading: {
     marginTop: '5em',

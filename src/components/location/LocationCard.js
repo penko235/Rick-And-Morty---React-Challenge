@@ -1,5 +1,5 @@
-import React,{useState} from 'react';
-import { makeStyles,withStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import CharCard from '../episodes/CharCard';
 import Card from '@material-ui/core/Card';
@@ -20,12 +20,9 @@ const useStyles = makeStyles({
     margin: 0,
     color: '#EAEAEA',
     backgroundColor: '#3C3E44',
-    borderRadius: '10px'
+    borderRadius: '10px',
   },
 });
-
-
-
 
 // MODAL
 
@@ -34,7 +31,7 @@ const DialogTitle = withStyles()((props) => {
   const classes = useStyles();
 
   return (
-    <MuiDialogTitle  disableTypography MuiDialog-paper {...other}>
+    <MuiDialogTitle disableTypography MuiDialog-paper {...other}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
         <IconButton
@@ -62,9 +59,6 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-
-
-
 const LocationCard = (props) => {
   const classes = useStyles();
 
@@ -87,57 +81,39 @@ const LocationCard = (props) => {
           <Typography gutterBottom variant="body2" color="#fff" component="p">
             Type: {props.type}
           </Typography>
-          <Typography  variant="body2" color="#fff" component="p">
-           Dimension: {props.dimension}
+          <Typography variant="body2" color="#fff" component="p">
+            Dimension: {props.dimension}
           </Typography>
           <Typography variant="body2" color="#fff" component="p">
             Created: {props.created}
           </Typography>
           <Button
-          className={classes.btn}
-          variant="contained"
-          color="primary"
-          onClick={handleClickOpen}
-          
-        >
-          <span className={classes.textButton}>Show Details</span>
-        </Button>
-        <Dialog
-          onClose={handleClose}
-          aria-labelledby="customized-dialog-title"
-          open={open}
-          maxWidth="xl"
-          className={classes.dialog}
-          disableScrollLock={ true }
-        >
-          <div className={classes.detailsHeading}>
-            <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-              <Typography align='center' variant="h4" component="h2">
-                Detail View
-              </Typography>
-              {/* <Typography align='center' variant="h6" component="h2">
-                Date: {props.air_date}
-              </Typography> */}
-            </DialogTitle>
-          </div>
-          {/* <DialogContent dividers>
-            <Typography gutterBottom variant="h5" component="h2">
-              <Grid container spacing={8}>
-                {props.location.map((char, index) => {
-                  return (
-                    <Grid key={index} item md={4}>
-                      <CharCard key={index} props={char} />
-                    </Grid>
-                  );
-                })}
-              </Grid>
-            </Typography>
-          </DialogContent> */}
-          <DialogActions></DialogActions>
-        </Dialog>
+            className={classes.btn}
+            variant="contained"
+            color="primary"
+            onClick={handleClickOpen}
+          >
+            <span className={classes.textButton}>Show Details</span>
+          </Button>
+          <Dialog
+            onClose={handleClose}
+            aria-labelledby="customized-dialog-title"
+            open={open}
+            maxWidth="xl"
+            className={classes.dialog}
+            disableScrollLock={true}
+          >
+            <div className={classes.detailsHeading}>
+              <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+                <Typography align="center" variant="h4" component="h2">
+                  Detail View
+                </Typography>
+              </DialogTitle>
+            </div>
+            <DialogActions></DialogActions>
+          </Dialog>
         </CardContent>
       </CardActionArea>
-   
     </Card>
   );
 };

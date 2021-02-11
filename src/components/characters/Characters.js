@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const characterUrl = 'https://rickandmortyapi.com/api/character';
-console.log()
+
 const Characters = () => {
   const classes = useStyles();
 

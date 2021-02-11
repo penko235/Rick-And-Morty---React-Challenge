@@ -69,15 +69,13 @@ const OriginModal = (props) => {
     getAllChar();
   }, []);
 
-  console.log(originChar);
-
   const closeOrigin = () => {
     setOrigin(false);
   };
   const showOrigin = () => {
     setOrigin(true);
   };
-console.log(props.char.url)
+
   return (
     <div>
       <Button
