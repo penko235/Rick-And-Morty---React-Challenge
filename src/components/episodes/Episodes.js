@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: '1400px',
     margin: '0 auto',
+    height: '100%'
   },
   heading: {
     marginTop: '5em',
@@ -15,9 +16,20 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     fontWeight: 'bold',
   },
-  pagination:{
-    
-  }
+  pagination: {
+    textAlign: 'center',
+    '& button': {
+      padding: '5px 30px',
+      marginRight: '5px',
+      cursor: 'pointer',
+      color: '#B5EDFC',
+      backgroundColor: '#6D6D6D',
+    },
+    '& button:hover': {
+      color: '#000',
+      backgroundColor: '#B5EDFC',
+    }
+  },
 }));
 
 const Episodes = () => {
@@ -27,7 +39,6 @@ const Episodes = () => {
   const [infoObject, setInfoObject] = useState({});
 
   const getAllEpisodes = async (page = 1) => {
-
     let numberPage;
     if (page) {
       numberPage = `?page=${page}`;
@@ -64,7 +75,9 @@ const Episodes = () => {
   return (
     <div>
       <h1 className={classes.heading}>Rick & Mortey Episodes</h1>
-      <div className={classes.pagination}>{pageArr}</div>
+      <div className={classes.pagination}>
+        {pageArr}
+      </div>
       <Grid container spacing={4} className={classes.root}>
         {episodes.map((episodes, index) => {
           return (
