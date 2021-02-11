@@ -3,7 +3,6 @@ import axios from 'axios';
 import EpisodeCard from './EpisodeCard';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
-import Pagination from './Pagination'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,11 +23,21 @@ const Episodes = () => {
   const classes = useStyles();
 
   const [episodes, setEpisodes] = useState([]);
+  const [infoObject, setInfoObject] = useState({});
 
-  const getAllEpisodes = async () => {
+  const getAllEpisodes = async (page = 1) => {
+    
+    let numberPage;
+    if (page) {
+      numberPage = `?page=${page}`;
+    } else {
+      numberPage = '';
+    }
+
     await axios
-      .get(episodeUrl)
+      .get(`https://rickandmortyapi.com/api/episode${numberPage}`)
       .then((response) => {
+        setInfoObject(response.data.info);
         setEpisodes(
           response.data.results.sort((a, b) =>
             a.name > b.name ? 1 : b.name > a.name ? -1 : 0
@@ -44,9 +53,17 @@ const Episodes = () => {
     getAllEpisodes();
   }, []);
 
+  let pageArr = [];
+  for (let number = 1; number <= infoObject.pages; number++) {
+    pageArr.push(
+      <button onClick={() => getAllEpisodes(number)}>{number}</button>
+    );
+  }
+
   return (
     <div>
       <h1 className={classes.heading}>Rick & Mortey Episodes</h1>
+      <div>{pageArr}</div>
       <Grid container spacing={4} className={classes.root}>
         {episodes.map((episodes, index) => {
           return (
@@ -63,7 +80,6 @@ const Episodes = () => {
           );
         })}
       </Grid>
-      <Pagination />
     </div>
   );
 };
