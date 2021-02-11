@@ -100,7 +100,8 @@ const CharCard = ({ props }) => {
       </CardActionArea>
       <CardActions></CardActions>
       {char.origin && <OriginModal char={char.origin} />}
-      <LocationModal char={char.location} />
+      {char.location &&   <LocationModal char={char.location} />}
+    
     </Card>
   );
 };

@@ -112,6 +112,9 @@ const OriginModal = (props) => {
                     </Grid>
                   );
                 })}
+                {!originChar.residents && (
+                  <h1>No characters</h1>
+                )}
             </Grid>
           </Typography>
         </DialogContent>

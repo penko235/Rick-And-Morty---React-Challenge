@@ -15,9 +15,10 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     fontWeight: 'bold',
   },
+  pagination:{
+    
+  }
 }));
-
-const episodeUrl = 'https://rickandmortyapi.com/api/episode';
 
 const Episodes = () => {
   const classes = useStyles();
@@ -26,7 +27,7 @@ const Episodes = () => {
   const [infoObject, setInfoObject] = useState({});
 
   const getAllEpisodes = async (page = 1) => {
-    
+
     let numberPage;
     if (page) {
       numberPage = `?page=${page}`;
@@ -63,7 +64,7 @@ const Episodes = () => {
   return (
     <div>
       <h1 className={classes.heading}>Rick & Mortey Episodes</h1>
-      <div>{pageArr}</div>
+      <div className={classes.pagination}>{pageArr}</div>
       <Grid container spacing={4} className={classes.root}>
         {episodes.map((episodes, index) => {
           return (
